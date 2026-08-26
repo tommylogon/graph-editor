@@ -1,5 +1,10 @@
 # 🌐 World Graph Editor – Feature TODO
 
+> **Legacy snapshot.** Active planning moved to
+> `docs/worldGraph/dev_tasks/` (kanban: todo → inprogress → review → done).
+> The open items below were migrated into individual task/bug files there;
+> this file is kept for history and should not be updated anymore.
+
 ## ✅ Core Graph Management
 - [ ] **Map mode**: locations on ground plane, characters hover above connected location (using edges)
 

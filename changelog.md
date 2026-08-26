@@ -2,6 +2,22 @@
 
 ## Recently Completed
 
+### Modularization (2026-08-26, task-013)
+- **Monoliths eliminated**: `storage.js` (738 ln), `visualization.js` (1474 ln)
+  and `ui.js` (3795 ln) are now 4-line compatibility shims. Implementation lives
+  in `js/storage/`, `js/visualization/`, `js/ui/` module directories composed
+  onto class prototypes via mixins.
+- storage: index (persistence/composer), graph CRUD, templates, undo, merge,
+  sprites
+- visualization: index (events/helpers), nodes, edges, physics, highlight, search
+- ui: index (constructor), events, contextMenu, panels, actions, settings,
+  modals (+ existing exportImport/forms/tabs/utils)
+- Removed ~800 lines of dead duplicated export generators from ui.js (live
+  copies already in `ui/exportImport.js`); collapsed duplicate
+  `saveGraph`/`loadGraph` definitions to the modal versions that already won.
+- Verified: node --check on all files, browser boot with zero console errors,
+  create/connect/filter/search/undo/redo and context-menu flows exercised.
+
 ### Core Graph Management
 - Create nodes (person, location, item, concept)
 - Delete nodes
