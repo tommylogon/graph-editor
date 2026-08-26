@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>World Graph Editor</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="info">WASD = move | Space/X = up/down | Right‑click = menu | Left‑click = select</div>
+
+    <!-- Tooltip -->
+    <div id="hover-preview" class="hover-preview"></div>
+
+    <!-- UI overlays will be injected here by ui.js -->
+
+    <!-- Three.js and helpers -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"
+            }
+        }
+    </script>
+
+    <!-- Our modules -->
+    <script type="module" src="js/storage.js"></script>
+    <script type="module" src="js/visualization.js"></script>
+    <script type="module" src="js/ui.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
